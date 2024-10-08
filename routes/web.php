@@ -63,6 +63,7 @@ Route::middleware('statusLogin')->group(function(){
 
     Route::get('/index', [BeritaController::class, 'show']);
     Route::post('/search', [BeritaController::class, 'search']);
+    Route::post('/searchberita', [BeritaController::class, 'searchberita']);
     Route::get('/berita/create', [BeritaController::class, 'create']);
     Route::post('/berita/create', [BeritaController::class, 'add']);
     Route::get('/berita/edit/{id}', [BeritaController::class, 'edit']);

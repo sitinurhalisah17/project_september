@@ -38,23 +38,24 @@
                 <li class="navbar-item"  style="margin-left: 25%;">
                     <a href="/home" class="nav-link">HOME</a>
                 </li>
-                <li class="navbar-item" style="margin-left: 30%;">
+                <li class="navbar-item" style="margin-left: 25%;">
                     <a href="/politik" class="nav-link">POLITIK</a>
                 </li>
-                <li class="navbar-item" style="margin-left: 33%;">
+                <li class="navbar-item" style="margin-left: 15%;">
                     <a href="/hukum" class="nav-link">HUKUM</a>
                 </li>
-                <li class="navbar-item" style="margin-left: 35%;">
+                <li class="navbar-item" style="margin-left: 20%;">
                     <a href="/ekonomi" class="nav-link">EKONOMI</a>
                 </li>
-
-                <form action="/search" class="d-flex mt-1" method="GET" style="margin-left: 5%; height: 30px">
-                    <!-- <label for="query">Cari Berita:</label> -->
-                    <input type="text" id="query" name="query" required>
-                    <input type="submit" value="Go">
-                </form>
-
-
+                <div class="col-md-6">
+                    <form action="/searchberita" method="post" style="margin-left: 10%; height: 20px; width:15">
+                        @csrf
+                        <div class="input-group mb-3">
+                            <input type="text" name="cari" class="form-control" placeholder="Search" id="">
+                            <button class="btn btn-primary" type="submit">Go</button>
+                        </div>
+                    </form>
+                </div>
               </ul>
            </div>
         </div>      

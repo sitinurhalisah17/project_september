@@ -23,6 +23,12 @@ class BeritaController extends Controller
         return view('index',$data);
     }
 
+    public function searchberita(Request $request){
+        $data['berita'] = Berita::where('judul',$request->cari)->orWhere('kategoris_id',$request->cari)->get();
+        $data['total'] = $data['berita']->count();
+        return view('home',$data);
+    }
+
     public function create(){
         $data['kategori'] = Kategori::all();
         return view('berita-create', $data);

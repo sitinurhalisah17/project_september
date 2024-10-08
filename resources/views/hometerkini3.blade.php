@@ -58,6 +58,15 @@
                 <li class="navbar-item" style="margin-left: 50%;">
                     <a href="/ekonomi" class="nav-link">EKONOMI</a>
                 </li>
+                <div class="col-md-6">
+                    <form action="/searchberita" method="post" style="margin-left: 10%; height: 20px; width:15">
+                        @csrf
+                        <div class="input-group mb-3">
+                            <input type="text" name="cari" class="form-control" placeholder="Search" id="">
+                            <button class="btn btn-primary" type="submit">Go</button>
+                        </div>
+                    </form>
+                </div>
               </ul>
            </div>
         </div>      

@@ -2,7 +2,7 @@
 @section('content')
     
     <div class="container pt-5">
-    <h3>Input Data Pengguna</h3>
+    <h3 style="margin-top: 8%">Input Data Pengguna</h3>
     @if ($errors->any())
         <ul>
             @foreach ($errors->all() as $item)
@@ -15,7 +15,7 @@
         <table>
             <tr>
                 <td>Nama</td>
-                <td><input type="text" name="nama" class="@error('name') error @enderror" id="" value="{{ $user->name }}"></td>
+                <td><input type="text" name="name" class="@error('name') error @enderror" id="" value="{{ $user->name }}"></td>
                 <td>
                     @error('name')
                         {{ $message }}

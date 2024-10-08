@@ -3,7 +3,7 @@
 
 <div class="container pt-5">
     
-    <h3>Input Data Pengguna</h3>
+    <h3 style="margin-top: 8%;">Input Data Pengguna</h3>
     @if ($errors->any())
         <ul>
             @foreach ($errors->all() as $item)

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href={{ asset('asset/bootstrap/css/bootstrap.min.css')}}>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark">
         <div class="container" style="margin-right: 20%;">
             <a href="/home" class="navbar-brand" style="margin-right: 10%;">Terkini</a>
             <a href="/terpopuler" class="navbar-brand" style="margin-right: 10%;">Terpopuler</a>
@@ -27,26 +27,35 @@
             </div>
         </div>
     </nav>
-    <nav class="navbar navbar-expand-sm" style="background-color:beige">
+    <nav class="navbar navbar-expand-sm fixed-top" style="background-color:beige; margin-top:4%; width: 100%; height: 8%;" >
         <div class="container" style="margin-right: 20%;">
-           <a href="#" class="navbar-brand" style="font-size: 38px;">Berita Terbaru</a>
+           <a href="#" class="navbar-brand">Berita Terbaru</a>
            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar">
                <span class="navbar-toggler-icon"></span>
            </button>
            <div class="collapse navbar-collapse" id="myNavbar">
-              <ul class="navbar-nav">
-                <li class="navbar-item"  style="margin-left: 35%;">
+              <ul class="navbar-nav mt-1">
+                <li class="navbar-item"  style="margin-left: 25%;">
                     <a href="/home" class="nav-link">HOME</a>
                 </li>
-                <li class="navbar-item" style="margin-left: 40%;">
+                <li class="navbar-item" style="margin-left: 25%;">
                     <a href="/politik" class="nav-link">POLITIK</a>
                 </li>
-                <li class="navbar-item" style="margin-left: 45%;">
+                <li class="navbar-item" style="margin-left: 15%;">
                     <a href="/hukum" class="nav-link">HUKUM</a>
                 </li>
-                <li class="navbar-item" style="margin-left: 50%;">
+                <li class="navbar-item" style="margin-left: 20%;">
                     <a href="/ekonomi" class="nav-link">EKONOMI</a>
                 </li>
+                <div class="col-md-6">
+                    <form action="/searchberita" method="post" style="margin-left: 10%; height: 20px; width:15">
+                        @csrf
+                        <div class="input-group mb-3">
+                            <input type="text" name="cari" class="form-control" placeholder="Search" id="">
+                            <button class="btn btn-primary" type="submit">Go</button>
+                        </div>
+                    </form>
+                </div>
               </ul>
            </div>
         </div>      
@@ -54,7 +63,7 @@
     <main>
         <section>
             <div class="text">
-                <p style="padding-top: 5%; margin-left: 16%; font-size: 20px;"> > Hukum > Kapolri apresiasi "soft approach" tim pembebasan pilot Philip </p>
+                <p style="padding-top: 10%; margin-left: 16%; font-size: 20px;"> > Hukum > Kapolri apresiasi "soft approach" tim pembebasan pilot Philip </p>
             </div>
             <div class="col">
                 <td>
